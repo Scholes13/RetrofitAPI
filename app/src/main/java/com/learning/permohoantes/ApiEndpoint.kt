@@ -1,25 +1,16 @@
 package com.learning.permohoantes
 
+import okhttp3.RequestBody
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ApiEndpoint {
 
     @GET("data.php")
     fun data() : Call<NoteModel>
 
-    @FormUrlEncoded
     @POST("create.php")
     fun createData(
-        @Field("nama") nama:String?,
-        @Field("nohp") nohp:String?,
-        @Field("noktp") noktp:String?,
-        @Field("alamat") alamat:String?,
-        @Field("pekerjaan") pekerjaan:String?,
-        @Field("rincian") rincian:String?,
-        @Field("tujuan") tujuan:String?
+        @Body body: RequestBody
     ) : Call<SubmitModel>
 }

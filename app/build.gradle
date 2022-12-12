@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.learning.permohoantes"
         minSdk 22
-        targetSdk 32
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -47,4 +47,8 @@ dependencies {
     implementation(platform("com.squareup.okhttp3:okhttp-bom:4.10.0"))
     implementation("com.squareup.okhttp3:okhttp")
     implementation("com.squareup.okhttp3:logging-interceptor")
+
+    implementation 'com.github.dhaval2404:imagepicker-support:1.7.1'
+    implementation 'com.github.florent37:inline-activity-result-kotlin:1.0.4'
+
 }
